@@ -6,16 +6,18 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Unesi broj: ");
-        String broj = scanner.nextLine();
+        boolean isBroj = false;
+        while (!isBroj){
+            System.out.print("Unesi broj: ");
+            String broj = scanner.nextLine();
 
-        if (isNumeric(broj)){
-            System.out.println("Unesen je broj");
-        }else {
-            System.out.println("Nije unesen broj");
+            if (isNumeric(broj)){
+                System.out.println("Unesen je broj");
+                isBroj = true;
+            }else {
+                System.out.println("Nije unesen broj");
+            }
         }
-
-
 
     }
 
